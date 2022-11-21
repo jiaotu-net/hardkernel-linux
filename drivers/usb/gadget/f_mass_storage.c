@@ -2744,11 +2744,11 @@ buffhds_first_it:
 	/* Prepare inquiryString */
 	i = get_default_bcdDevice();
 	snprintf(common->inquiry_string, sizeof common->inquiry_string,
-		 "%-8s%-16s%04x", cfg->vendor_name ?: "JMicron",
+		 "%-8s%-16s%04x", cfg->vendor_name ?: "JMicron_Tech",
 		 /* Assume product name dependent on the first LUN */
 		 cfg->product_name ?: (common->luns->cdrom
 				     ? "USB to NVME Bridge"
-				     : "File-CD Gadget"),
+				     : "USB to NVME Bridge"),
 		 i);
 
 	/*
